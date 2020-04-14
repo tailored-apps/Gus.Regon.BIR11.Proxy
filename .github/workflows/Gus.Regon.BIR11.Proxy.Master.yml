@@ -1,9 +1,7 @@
-name: .NET Core
+name: Gus.Regon.BIR11.Proxy Master Build
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
     branches: [ master ]
 
 jobs:

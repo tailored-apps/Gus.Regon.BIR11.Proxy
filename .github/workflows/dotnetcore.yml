@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 3.1.101
     - name: Install dot net tools
-      run: npm i -g dotnettools
+      run: npm install dotnettools
     - name: Install dependencies
       run: dotnet restore ./src/Gus.Regon.BIR11.sln
     - name: Build

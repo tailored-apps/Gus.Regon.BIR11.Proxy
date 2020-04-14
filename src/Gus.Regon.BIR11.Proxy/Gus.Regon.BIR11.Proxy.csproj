@@ -7,7 +7,7 @@
     <RepositoryUrl>https://github.com/tailored-apps/Gus.Regon.BIR11.Proxy</RepositoryUrl>
     <RepositoryType>github</RepositoryType>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.1.4.0</Version>
+    <Version>0.1.0</Version>
     <Description>Proxy Lib for consuming GUS Regon API web service written in .net standard supported for both .net Core and Framework.</Description>
     <SignAssembly>false</SignAssembly>
     <DelaySign>false</DelaySign>

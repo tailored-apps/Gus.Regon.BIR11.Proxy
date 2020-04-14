@@ -34,4 +34,5 @@ jobs:
     - name: Publish NuGet
       uses: rohith/publish-nuget@v2.2.1
       with:
+        PROJECT_FILE_PATH: ./src/Gus.Regon.BIR11.Proxy/Gus.Regon.BIR11.Proxy.csproj
         NUGET_KEY: ${{ secrets.GusNugetKey }}

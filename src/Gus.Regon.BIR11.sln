@@ -9,6 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gus.Regon.BIR11.Proxy.Itegr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configs", "Configs", "{4D516C68-F888-401A-B4AE-67399A8FCE6F}"
 	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\Gus.Regon.BIR11.Proxy.Develop.yml = ..\.github\workflows\Gus.Regon.BIR11.Proxy.Develop.yml
 		..\.github\workflows\Gus.Regon.BIR11.Proxy.Master.yml = ..\.github\workflows\Gus.Regon.BIR11.Proxy.Master.yml
 	EndProjectSection
 EndProject

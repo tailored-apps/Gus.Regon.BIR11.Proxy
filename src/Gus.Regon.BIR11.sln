@@ -5,7 +5,12 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gus.Regon.BIR11.Proxy", "Gus.Regon.BIR11.Proxy\Gus.Regon.BIR11.Proxy.csproj", "{DEA85175-EEE9-4D91-8793-1BFA00768DBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gus.Regon.BIR11.Proxy.Itegration.Tests", "..\test\Gus.Regon.BIR11.Proxy.Itegration.Tests\Gus.Regon.BIR11.Proxy.Itegration.Tests.csproj", "{4E06636C-6582-4282-8F3E-E74472DDF679}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gus.Regon.BIR11.Proxy.Itegration.Tests", "..\test\Gus.Regon.BIR11.Proxy.Itegration.Tests\Gus.Regon.BIR11.Proxy.Itegration.Tests.csproj", "{4E06636C-6582-4282-8F3E-E74472DDF679}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configs", "Configs", "{4D516C68-F888-401A-B4AE-67399A8FCE6F}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\dotnetcore.yml = ..\.github\workflows\dotnetcore.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

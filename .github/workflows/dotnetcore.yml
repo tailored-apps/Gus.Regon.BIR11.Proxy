@@ -21,13 +21,17 @@ jobs:
       run: npm install dotnettools
     - name: Bump version
       run: node ./node_modules/dotnettools/bin/dnt.js bump-versions patch
+    - name: Add & Commit
+      uses: EndBug/add-and-commit@v4.0.1
+      with:
+        message: Version update
     - name: Install dependencies
       run: dotnet restore ./src/Gus.Regon.BIR11.sln
     - name: Build
       run: dotnet build ./src/Gus.Regon.BIR11.sln --configuration Release --no-restore
     - name: Test
       run: dotnet test ./src/Gus.Regon.BIR11.sln --no-restore --verbosity normal
-    - name: Add & Commit
-      uses: EndBug/add-and-commit@v4.0.1
+    - name: Publish NuGet
+      uses: rohith/publish-nuget@v2.2.1
       with:
-        message: Version update
+        NUGET_KEY: ${{ secrets.GusNugetKey }}

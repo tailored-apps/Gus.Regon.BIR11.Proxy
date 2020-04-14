@@ -20,7 +20,7 @@ jobs:
     - name: Install dot net tools
       run: npm install dotnettools
     - name: Bump version
-      run: node node_modules\dotnettools\bin\dnt.js bump-versions patch
+      run: node ./node_modules/dotnettools/bin/dnt.js bump-versions patch
     - name: Install dependencies
       run: dotnet restore ./src/Gus.Regon.BIR11.sln
     - name: Build

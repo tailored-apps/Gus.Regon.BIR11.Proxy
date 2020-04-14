@@ -1,0 +1,111 @@
+
+<!-- ============= Nie znaleziono wpisu dla podanych kryteriów wyszukiwania  ======================= -->
+
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+   <s:Header>
+      <a:Action s:mustUnderstand="1">http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/DanePobierzPelnyRaportResponse</a:Action>
+   </s:Header>
+   <s:Body>
+      <DanePobierzPelnyRaportResponse xmlns="http://CIS/BIR/PUBL/2014/07">
+         <DanePobierzPelnyRaportResult><![CDATA[<root>
+  <dane>
+    <ErrorCode>4</ErrorCode>
+    <ErrorMessagePl>Nie znaleziono wpisu dla podanych kryteriów wyszukiwania.</ErrorMessagePl>
+    <ErrorMessageEn>No data found for the specified search criteria.</ErrorMessageEn>
+    <pRegon>999999999</pRegon>
+    <Typ_podmiotu />
+    <Raport>BIR11OsFizycznaDaneOgolne</Raport>	
+  </dane>
+</root>]]></DanePobierzPelnyRaportResult>
+      </DanePobierzPelnyRaportResponse>
+   </s:Body>
+</s:Envelope>
+
+<!-- ============= Nieprawid³owa lub pusta nazwa raportu  ======================= -->
+
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+   <s:Header>
+      <a:Action s:mustUnderstand="1">http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/DanePobierzPelnyRaportResponse</a:Action>
+   </s:Header>
+   <s:Body>
+      <DanePobierzPelnyRaportResponse xmlns="http://CIS/BIR/PUBL/2014/07">
+         <DanePobierzPelnyRaportResult><![CDATA[<root>
+  <dane>
+    <ErrorCode>5</ErrorCode>
+    <ErrorMessagePl>Nieprawid³owa lub pusta nazwa raportu.</ErrorMessagePl>
+    <ErrorMessageEn>Invalid or empty report name.</ErrorMessageEn>
+    <pRegon>99999999900099</pRegon>
+    <Typ_podmiotu />
+    <Raport> BIR1.1JednLokalnaOsFizycznej</Raport>
+  </dane>
+</root>]]></DanePobierzPelnyRaportResult>
+      </DanePobierzPelnyRaportResponse>
+   </s:Body>
+</s:Envelope>
+
+<!-- ============= Dla podmiotów skreœlonych przed 2014-11-08 dzia³alnoœci PKD nie s¹ udostêpniane  ======================= -->
+
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+   <s:Header>
+      <a:Action s:mustUnderstand="1">http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/DanePobierzPelnyRaportResponse</a:Action>
+   </s:Header>
+   <s:Body>
+      <DanePobierzPelnyRaportResponse xmlns="http://CIS/BIR/PUBL/2014/07">
+         <DanePobierzPelnyRaportResult><![CDATA[<root>
+  <dane>
+    <ErrorCode>11</ErrorCode>
+    <ErrorMessagePl>Dla podmiotów skreœlonych przed 2014-11-08 dzia³alnoœci PKD nie s¹ udostêpniane.</ErrorMessagePl>
+    <ErrorMessageEn>For entities deleted before 2014-11-08, the PKDs are not made available.</ErrorMessageEn>
+    <pRegon>021625560</pRegon>
+    <Typ_podmiotu>F</Typ_podmiotu>
+    <Raport>birBIR11OsFizycznaPkd</Raport>
+  </dane>
+</root>]]></DanePobierzPelnyRaportResult>
+      </DanePobierzPelnyRaportResponse>
+   </s:Body>
+</s:Envelope>
+
+<!-- =========================================================================->
+<!-- =========================================================================->
+<!-- ========== Komunikaty dla raportu  BIR11OsPrawnaSpCywilnaWspolnicy ===============->
+<!-- =========================================================================->
+<!-- =========================================================================->
+
+<!-- ============= Podmiot nie jest spó³k¹ cywiln¹  =================================== -->
+
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+   <s:Header>
+      <a:Action s:mustUnderstand="1">http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/DanePobierzPelnyRaportResponse</a:Action>
+   </s:Header>
+   <s:Body>
+      <DanePobierzPelnyRaportResponse xmlns="http://CIS/BIR/PUBL/2014/07">
+         <DanePobierzPelnyRaportResult><![CDATA[<root>
+  <dane>
+    <ErrorCode>21</ErrorCode>
+    <pRegon>999999999</pRegon>
+    <DatabaseSearchResultPl>Podmiot nie jest spó³k¹ cywiln¹</DatabaseSearchResultPl>
+    <DatabaseSearchResultEn>The entity is not a civil law partnership</DatabaseSearchResultEn>
+  </dane>
+</root>]]></DanePobierzPelnyRaportResult>
+      </DanePobierzPelnyRaportResponse>
+   </s:Body>
+</s:Envelope>
+
+<!-- ============= W rejestrze REGON brak jest wprowadzonych wspolników dla tej SC  ======================= -->
+
+   <s:Header>
+      <a:Action s:mustUnderstand="1">http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/DanePobierzPelnyRaportResponse</a:Action>
+   </s:Header>
+   <s:Body>
+      <DanePobierzPelnyRaportResponse xmlns="http://CIS/BIR/PUBL/2014/07">
+         <DanePobierzPelnyRaportResult><![CDATA[<root>
+  <dane>
+    <ErrorCode>22</ErrorCode>
+    <pRegon>002003735</pRegon>
+    <DatabaseSearchResultPl>W rejestrze REGON brak jest wprowadzonych wspolników dla tej SC</DatabaseSearchResultPl>
+    <DatabaseSearchResultEn>In the REGON register there are no entered partners on this SC</DatabaseSearchResultEn>
+  </dane>
+</root>]]></DanePobierzPelnyRaportResult>
+      </DanePobierzPelnyRaportResponse>
+   </s:Body>
+</s:Envelope>

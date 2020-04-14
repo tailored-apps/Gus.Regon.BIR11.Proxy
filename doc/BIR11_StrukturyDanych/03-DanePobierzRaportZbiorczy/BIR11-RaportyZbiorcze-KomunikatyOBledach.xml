@@ -1,0 +1,132 @@
+
+<!-- ============= brak danych  ======================= -->
+
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+   <s:Header>
+      <a:Action s:mustUnderstand="1">http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/DanePobierzRaportZbiorczyResponse</a:Action>
+   </s:Header>
+   <s:Body>
+      <DanePobierzRaportZbiorczyResponse xmlns="http://CIS/BIR/PUBL/2014/07">
+         <DanePobierzRaportZbiorczyResult><![CDATA[<root>
+  <dane>
+    <ErrorCode>4</ErrorCode>
+    <ErrorMessagePl>Brak danych.</ErrorMessagePl>
+    <ErrorMessageEn>No data found. </ErrorMessageEn>
+  </dane>
+</root>]]></DanePobierzRaportZbiorczyResult>
+      </DanePobierzRaportZbiorczyResponse>
+   </s:Body>
+</s:Envelope>
+
+<!-- ============= brak danych dla soboty i niedzieli ======================= -->
+
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+   <s:Header>
+      <a:Action s:mustUnderstand="1">http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/DanePobierzRaportZbiorczyResponse</a:Action>
+   </s:Header>
+   <s:Body>
+      <DanePobierzRaportZbiorczyResponse xmlns="http://CIS/BIR/PUBL/2014/07">
+         <DanePobierzRaportZbiorczyResult><![CDATA[<root>
+  <dane>
+    <ErrorCode>4</ErrorCode>
+    <ErrorMessagePl>Brak danych. (Jako datê dla raportu wprowadzono sobotê lub niedzielê).</ErrorMessagePl>
+    <ErrorMessageEn>No data. A day off was entered</ErrorMessageEn>
+  </dane>
+</root>]]></DanePobierzRaportZbiorczyResult>
+      </DanePobierzRaportZbiorczyResponse>
+   </s:Body>
+</s:Envelope>
+
+<!-- ========== Jednoczesne generowanie zbyt wielu raportow zbiorczych  na serwerze ======================= -->
+
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+   <s:Header>
+      <a:Action s:mustUnderstand="1">http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/DanePobierzRaportZbiorczyResponse</a:Action>
+   </s:Header>
+   <s:Body>
+      <DanePobierzRaportZbiorczyResponse xmlns="http://CIS/BIR/PUBL/2014/07">
+         <DanePobierzRaportZbiorczyResult><![CDATA[<root>
+  <dane>
+    <ErrorCode>101</ErrorCode>
+    <ErrorMessagePl>Przekroczna dozwolona liczba jednoczeœnie generowanych raportów zbiorczych. Proszê spróbowaæ za kilka minut.</ErrorMessagePl>
+    <ErrorMessageEn>Overrun allowed number of aggregate reports generated simultaneously. Please try in a few minutes.</ErrorMessageEn>
+  </dane>
+</root>]]></DanePobierzRaportZbiorczyResult>
+      </DanePobierzRaportZbiorczyResponse>
+   </s:Body>
+</s:Envelope>
+
+<!-- ==========  wprowadzono datê bie¿¹c¹  ======================= -->
+
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+   <s:Header>
+      <a:Action s:mustUnderstand="1">http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/DanePobierzRaportZbiorczyResponse</a:Action>
+   </s:Header>
+   <s:Body>
+      <DanePobierzRaportZbiorczyResponse xmlns="http://CIS/BIR/PUBL/2014/07">
+         <DanePobierzRaportZbiorczyResult><![CDATA[<root>
+  <dane>
+    <ErrorCode>102</ErrorCode>
+    <ErrorMessagePl>Bie¿¹cy dzieñ nie jest obs³ugiwany</ErrorMessagePl>
+    <ErrorMessageEn>The current day is not supported</ErrorMessageEn>
+  </dane>
+</root>]]></DanePobierzRaportZbiorczyResult>
+      </DanePobierzRaportZbiorczyResponse>
+   </s:Body>
+</s:Envelope>
+<!-- ==========  wprowadzono datê przysz³¹  ======================= -->
+
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+   <s:Header>
+      <a:Action s:mustUnderstand="1">http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/DanePobierzRaportZbiorczyResponse</a:Action>
+   </s:Header>
+   <s:Body>
+      <DanePobierzRaportZbiorczyResponse xmlns="http://CIS/BIR/PUBL/2014/07">
+         <DanePobierzRaportZbiorczyResult><![CDATA[<root>
+  <dane>
+    <ErrorCode>103</ErrorCode>
+    <ErrorMessagePl>Wprowadzono datê przysz³¹</ErrorMessagePl>
+    <ErrorMessageEn>A future date has been entered</ErrorMessageEn>
+  </dane>
+</root>]]></DanePobierzRaportZbiorczyResult>
+      </DanePobierzRaportZbiorczyResponse>
+   </s:Body>
+</s:Envelope>
+<!-- ==========  wprowadzono nieobs³ugiwan¹ datê z przesz³oœci  ======================= -->
+
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+   <s:Header>
+      <a:Action s:mustUnderstand="1">http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/DanePobierzRaportZbiorczyResponse</a:Action>
+   </s:Header>
+   <s:Body>
+      <DanePobierzRaportZbiorczyResponse xmlns="http://CIS/BIR/PUBL/2014/07">
+         <DanePobierzRaportZbiorczyResult><![CDATA[<root>
+  <dane>
+    <ErrorCode>104</ErrorCode>
+    <ErrorMessagePl>Wprowadzono nieobs³ugiwan¹ datê z przesz³oœci (wiêcej ni¿ tydzieñ wstecz)</ErrorMessagePl>
+    <ErrorMessageEn>An unsupported past date has been entered (more than one week back)</ErrorMessageEn>
+  </dane>
+</root>]]></DanePobierzRaportZbiorczyResult>
+      </DanePobierzRaportZbiorczyResponse>
+   </s:Body>
+</s:Envelope>
+
+<!-- ==========  Nieprawid³owa nazwa raportu  ======================= -->
+
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+   <s:Header>
+      <a:Action s:mustUnderstand="1">http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/DanePobierzRaportZbiorczyResponse</a:Action>
+   </s:Header>
+   <s:Body>
+      <DanePobierzRaportZbiorczyResponse xmlns="http://CIS/BIR/PUBL/2014/07">
+         <DanePobierzRaportZbiorczyResult><![CDATA[<root>
+  <dane>
+    <ErrorCode>105</ErrorCode>
+    <ErrorMessagePl>Nieprawid³owa nazwa raportu: </ErrorMessagePl>
+    <ErrorMessageEn>Invalid report name: </ErrorMessageEn>
+    <pNazwaRaportu> BIR1.1NowePodmiotyPrawneOrazDzialalnosciOsFizycznych</pNazwaRaportu>
+  </dane>
+</root>]]></DanePobierzRaportZbiorczyResult>
+      </DanePobierzRaportZbiorczyResponse>
+   </s:Body>
+</s:Envelope>

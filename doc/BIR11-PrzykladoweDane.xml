@@ -1,0 +1,779 @@
+﻿
+<!-- Przykładowe dane (tutaj częściowo zanonimizowane) zwracane przez  
+1) metodę DaneSzukaj 
+2) raporty metody DanePobierzPelnyRaport 
+3) raporty metody DanePobierzRaportZbiorczy
+-->
+
+<!-- 1) Metoda DaneSzukajPodmioty -->
+
+<!-- Przykład 1 - podmiot z jedną działalnością -->
+<root>
+  <dane>
+    <Regon>000331501</Regon>
+    <Nip>5261040828</Nip>
+    <StatusNip />
+    <Nazwa>GŁÓWNY URZĄD STATYSTYCZNY</Nazwa>
+    <Wojewodztwo>MAZOWIECKIE</Wojewodztwo>
+    <Powiat>m. st. Warszawa</Powiat>
+    <Gmina>Śródmieście</Gmina>
+    <Miejscowosc>Warszawa</Miejscowosc>
+    <KodPocztowy>00-925</KodPocztowy>
+    <Ulica>ul. Test-Krucza</Ulica>
+    <NrNieruchomosci>208</NrNieruchomosci>
+    <NrLokalu />
+    <Typ>P</Typ>
+    <SilosID>6</SilosID>
+    <DataZakonczeniaDzialalnosci />
+  </dane>
+</root>
+
+<!-- Przykład 2 - podmiot z więcej niż jedną działalnością  (tu dwie; maksymalnie moga być trzy)  -->
+<root>
+  <dane>
+    <Regon>xxxxxxxxx</Regon>
+    <Nip>nnnnnnnnnn</Nip>
+    <StatusNip />
+    <Nazwa>AAAAAAAA</Nazwa>
+    <Wojewodztwo>LUBELSKIE</Wojewodztwo>
+    <Powiat>kraśnicki</Powiat>
+    <Gmina>Kraśnik</Gmina>
+    <Miejscowosc>Kraśnik</Miejscowosc>
+    <KodPocztowy>23-200</KodPocztowy>
+    <Ulica>ul. Test-Wilcza</Ulica>
+    <NrNieruchomosci>yy</NrNieruchomosci>
+    <NrLokalu />
+    <Typ>F</Typ>
+    <SilosID>1</SilosID>
+    <DataZakonczeniaDzialalnosci />
+  </dane>
+  <dane>
+    <Regon>xxxxxxxxx</Regon>
+    <Nip>nnnnnnnnnn</Nip>
+    <StatusNip />
+    <Nazwa>GOSPODARSTWO ROLNE</Nazwa>
+    <Wojewodztwo>LUBELSKIE</Wojewodztwo>
+    <Powiat>kraśnicki</Powiat>
+    <Gmina>Zakrzówek</Gmina>
+    <Miejscowosc>Sulów</Miejscowosc>
+    <KodPocztowy>23-213</KodPocztowy>
+    <NrNieruchomosci>zz</NrNieruchomosci>
+    <NrLokalu />
+    <Typ>F</Typ>
+    <SilosID>2</SilosID>
+    <DataZakonczeniaDzialalnosci />
+  </dane>
+</root>
+
+<!-- ================================================================================  -->
+<!-- ================================================================================  -->
+<!-- ================================================================================  -->
+<!-- ================================================================================  -->
+
+<!-- ============ 2a)  raporty metody DanePobierzPelnyRaport dot. osoby prawnej ================== -->
+
+<!-- BIR11OsPrawna -->
+
+<root>
+  <dane>
+    <praw_regon9>276592498</praw_regon9>
+    <praw_nip>9542300619</praw_nip>
+    <praw_statusNip />
+    <praw_nazwa>"EUROPEJSKA" SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ</praw_nazwa>
+    <praw_nazwaSkrocona />
+    <praw_numerWRejestrzeEwidencji>0000135115</praw_numerWRejestrzeEwidencji>
+    <praw_dataWpisuDoRejestruEwidencji>2009-03-24</praw_dataWpisuDoRejestruEwidencji>
+    <praw_dataPowstania>1999-07-19</praw_dataPowstania>
+    <praw_dataRozpoczeciaDzialalnosci>1999-08-29</praw_dataRozpoczeciaDzialalnosci>
+    <praw_dataWpisuDoRegon />
+    <praw_dataZawieszeniaDzialalnosci />
+    <praw_dataWznowieniaDzialalnosci />
+    <praw_dataZaistnieniaZmiany>2010-02-19</praw_dataZaistnieniaZmiany>
+    <praw_dataZakonczeniaDzialalnosci />
+    <praw_dataSkresleniaZRegon />
+    <praw_dataOrzeczeniaOUpadlosci />
+    <praw_dataZakonczeniaPostepowaniaUpadlosciowego />
+    <praw_adSiedzKraj_Symbol>PL</praw_adSiedzKraj_Symbol>
+    <praw_adSiedzWojewodztwo_Symbol>14</praw_adSiedzWojewodztwo_Symbol>
+    <praw_adSiedzPowiat_Symbol>65</praw_adSiedzPowiat_Symbol>
+    <praw_adSiedzGmina_Symbol>058</praw_adSiedzGmina_Symbol>
+    <praw_adSiedzKodPocztowy>02672</praw_adSiedzKodPocztowy>
+    <praw_adSiedzMiejscowoscPoczty_Symbol>0918130</praw_adSiedzMiejscowoscPoczty_Symbol>
+    <praw_adSiedzMiejscowosc_Symbol>0918130</praw_adSiedzMiejscowosc_Symbol>
+    <praw_adSiedzUlica_Symbol>10013</praw_adSiedzUlica_Symbol>
+    <praw_adSiedzNumerNieruchomosci>50</praw_adSiedzNumerNieruchomosci>
+    <praw_adSiedzNumerLokalu />
+    <praw_adSiedzNietypoweMiejsceLokalizacji />
+    <praw_numerTelefonu />
+    <praw_numerWewnetrznyTelefonu />
+    <praw_numerFaksu />
+    <praw_adresEmail />
+    <praw_adresStronyinternetowej />
+    <praw_adSiedzKraj_Nazwa>POLSKA</praw_adSiedzKraj_Nazwa>
+    <praw_adSiedzWojewodztwo_Nazwa>MAZOWIECKIE</praw_adSiedzWojewodztwo_Nazwa>
+    <praw_adSiedzPowiat_Nazwa>m. st. Warszawa</praw_adSiedzPowiat_Nazwa>
+    <praw_adSiedzGmina_Nazwa>Mokotów</praw_adSiedzGmina_Nazwa>
+    <praw_adSiedzMiejscowosc_Nazwa>Warszawa</praw_adSiedzMiejscowosc_Nazwa>
+    <praw_adSiedzMiejscowoscPoczty_Nazwa>Warszawa</praw_adSiedzMiejscowoscPoczty_Nazwa>
+    <praw_adSiedzUlica_Nazwa>ul. Test-Krucza</praw_adSiedzUlica_Nazwa>
+    <praw_podstawowaFormaPrawna_Symbol>1</praw_podstawowaFormaPrawna_Symbol>
+    <praw_szczegolnaFormaPrawna_Symbol>17</praw_szczegolnaFormaPrawna_Symbol>
+    <praw_formaFinansowania_Symbol>1</praw_formaFinansowania_Symbol>
+    <praw_formaWlasnosci_Symbol>215</praw_formaWlasnosci_Symbol>
+    <praw_organZalozycielski_Symbol />
+    <praw_organRejestrowy_Symbol>071010050</praw_organRejestrowy_Symbol>
+    <praw_rodzajRejestruEwidencji_Symbol>138</praw_rodzajRejestruEwidencji_Symbol>
+    <praw_podstawowaFormaPrawna_Nazwa>OSOBA PRAWNA</praw_podstawowaFormaPrawna_Nazwa>
+    <praw_szczegolnaFormaPrawna_Nazwa>SPÓŁKI Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ</praw_szczegolnaFormaPrawna_Nazwa>
+    <praw_formaFinansowania_Nazwa>JEDNOSTKA SAMOFINANSUJĄCA NIE BĘDĄCA JEDNOSTKĄ BUDŻETOWĄ LUB SAMORZĄDOWYM ZAKŁADEM BUDŻETOWYM</praw_formaFinansowania_Nazwa>
+    <praw_formaWlasnosci_Nazwa>WŁASNOŚĆ PRYWATNA KRAJOWA POZOSTAŁA</praw_formaWlasnosci_Nazwa>
+    <praw_organZalozycielski_Nazwa />
+    <praw_organRejestrowy_Nazwa>SĄD REJONOWY DLA M.ST.WARSZAWY W WARSZAWIE,XIII WYDZIAŁ GOSPODARCZY KRAJOWEGO REJESTRU SĄDOWEGO</praw_organRejestrowy_Nazwa>
+    <praw_rodzajRejestruEwidencji_Nazwa>REJESTR PRZEDSIĘBIORCÓW</praw_rodzajRejestruEwidencji_Nazwa>
+    <praw_liczbaJednLokalnych>2</praw_liczbaJednLokalnych>
+  </dane>
+</root>
+
+<!-- BIR11OsPrawnaPkd -->
+
+<root>
+  <dane>
+    <praw_pkdKod>4773Z</praw_pkdKod>
+    <praw_pkdNazwa>SPRZEDAŻ DETALICZNA WYROBÓW FARMACEUTYCZNYCH PROWADZONA W WYSPECJALIZOWANYCH SKLEPACH</praw_pkdNazwa>
+    <praw_pkdPrzewazajace>1</praw_pkdPrzewazajace>
+  </dane>
+  <dane>
+    <praw_pkdKod>2120Z</praw_pkdKod>
+    <praw_pkdNazwa>PRODUKCJA LEKÓW I POZOSTAŁYCH WYROBÓW FARMACEUTYCZNYCH</praw_pkdNazwa>
+    <praw_pkdPrzewazajace>0</praw_pkdPrzewazajace>
+  </dane>
+</root>
+
+<!-- BIR11OsPrawnaListaJednLokalnych -->
+
+<root>
+  <dane>
+    <lokpraw_regon14>27659249800038</lokpraw_regon14>
+    <lokpraw_nazwa>APTEKA "EUROPEJSKA"</lokpraw_nazwa>
+    <lokpraw_adSiedzKraj_Symbol>PL</lokpraw_adSiedzKraj_Symbol>
+    <lokpraw_adSiedzWojewodztwo_Symbol>24</lokpraw_adSiedzWojewodztwo_Symbol>
+    <lokpraw_adSiedzPowiat_Symbol>69</lokpraw_adSiedzPowiat_Symbol>
+    <lokpraw_adSiedzGmina_Symbol>011</lokpraw_adSiedzGmina_Symbol>
+    <lokpraw_adSiedzKodPocztowy>40026</lokpraw_adSiedzKodPocztowy>
+    <lokpraw_adSiedzMiejscowoscPoczty_Symbol>0937474</lokpraw_adSiedzMiejscowoscPoczty_Symbol>
+    <lokpraw_adSiedzMiejscowosc_Symbol>0937474</lokpraw_adSiedzMiejscowosc_Symbol>
+    <lokpraw_adSiedzUlica_Symbol>24261</lokpraw_adSiedzUlica_Symbol>
+    <lokpraw_adSiedzNumerNieruchomosci>7</lokpraw_adSiedzNumerNieruchomosci>
+    <lokpraw_adSiedzNumerLokalu />
+    <lokpraw_adSiedzNietypoweMiejsceLokalizacji />
+    <lokpraw_adSiedzWojewodztwo_Nazwa>ŚLĄSKIE</lokpraw_adSiedzWojewodztwo_Nazwa>
+    <lokpraw_adSiedzPowiat_Nazwa>m. Katowice</lokpraw_adSiedzPowiat_Nazwa>
+    <lokpraw_adSiedzGmina_Nazwa>M. Katowice</lokpraw_adSiedzGmina_Nazwa>
+    <lokpraw_adSiedzMiejscowosc_Nazwa>Katowice</lokpraw_adSiedzMiejscowosc_Nazwa>
+    <lokpraw_adSiedzMiejscowoscPoczty_Nazwa>Katowice</lokpraw_adSiedzMiejscowoscPoczty_Nazwa>
+    <lokpraw_adSiedzUlica_Nazwa>ul. Test-Wilcza</lokpraw_adSiedzUlica_Nazwa>
+    <lokpraw_dataPowstania>1999-08-25</lokpraw_dataPowstania>
+    <lokpraw_dataRozpoczeciaDzialalnosci>1999-08-25</lokpraw_dataRozpoczeciaDzialalnosci>
+    <lokpraw_dataWpisuDoRegon />
+    <lokpraw_dataZawieszeniaDzialalnosci />
+    <lokpraw_dataWznowieniaDzialalnosci />
+    <lokpraw_dataZakonczeniaDzialalnosci />
+    <lokpraw_dataSkresleniaZRegon />
+  </dane>
+  <dane>
+    <lokpraw_regon14>27659249800045</lokpraw_regon14>
+    <lokpraw_nazwa>APTEKA "EUROPEJSKA" (GEANT)</lokpraw_nazwa>
+    <lokpraw_adSiedzKraj_Symbol>PL</lokpraw_adSiedzKraj_Symbol>
+    <lokpraw_adSiedzWojewodztwo_Symbol>24</lokpraw_adSiedzWojewodztwo_Symbol>
+    <lokpraw_adSiedzPowiat_Symbol>69</lokpraw_adSiedzPowiat_Symbol>
+    <lokpraw_adSiedzGmina_Symbol>011</lokpraw_adSiedzGmina_Symbol>
+    <lokpraw_adSiedzKodPocztowy>40028</lokpraw_adSiedzKodPocztowy>
+    <lokpraw_adSiedzMiejscowoscPoczty_Symbol>0937474</lokpraw_adSiedzMiejscowoscPoczty_Symbol>
+    <lokpraw_adSiedzMiejscowosc_Symbol>0937474</lokpraw_adSiedzMiejscowosc_Symbol>
+    <lokpraw_adSiedzUlica_Symbol>24261</lokpraw_adSiedzUlica_Symbol>
+    <lokpraw_adSiedzNumerNieruchomosci>60</lokpraw_adSiedzNumerNieruchomosci>
+    <lokpraw_adSiedzNumerLokalu />
+    <lokpraw_adSiedzNietypoweMiejsceLokalizacji />
+    <lokpraw_adSiedzWojewodztwo_Nazwa>ŚLĄSKIE</lokpraw_adSiedzWojewodztwo_Nazwa>
+    <lokpraw_adSiedzPowiat_Nazwa>m. Katowice</lokpraw_adSiedzPowiat_Nazwa>
+    <lokpraw_adSiedzGmina_Nazwa>M. Katowice</lokpraw_adSiedzGmina_Nazwa>
+    <lokpraw_adSiedzMiejscowosc_Nazwa>Katowice</lokpraw_adSiedzMiejscowosc_Nazwa>
+    <lokpraw_adSiedzMiejscowoscPoczty_Nazwa>Katowice</lokpraw_adSiedzMiejscowoscPoczty_Nazwa>
+    <lokpraw_adSiedzUlica_Nazwa>ul. Test-Wilcza</lokpraw_adSiedzUlica_Nazwa>
+    <lokpraw_dataPowstania>1999-11-15</lokpraw_dataPowstania>
+    <lokpraw_dataRozpoczeciaDzialalnosci>1999-11-17</lokpraw_dataRozpoczeciaDzialalnosci>
+    <lokpraw_dataWpisuDoRegon />
+    <lokpraw_dataZawieszeniaDzialalnosci />
+    <lokpraw_dataWznowieniaDzialalnosci />
+    <lokpraw_dataZakonczeniaDzialalnosci />
+    <lokpraw_dataSkresleniaZRegon />
+  </dane>
+</root>
+
+<!-- BIR11JednLokalnaOsPrawnej -->
+
+<root>
+  <dane>
+    <lokpraw_regon14>27659249800038</lokpraw_regon14>
+    <lokpraw_nazwa>APTEKA "EUROPEJSKA"</lokpraw_nazwa>
+    <lokpraw_numerWrejestrzeEwidencji>0688/99        </lokpraw_numerWrejestrzeEwidencji>
+    <lokpraw_dataWpisuDoRejestruEwidencji>1999-08-25</lokpraw_dataWpisuDoRejestruEwidencji>
+    <lokpraw_dataPowstania>1999-08-25</lokpraw_dataPowstania>
+    <lokpraw_dataRozpoczeciaDzialalnosci>1999-08-25</lokpraw_dataRozpoczeciaDzialalnosci>
+    <lokpraw_dataWpisuDoRegon />
+    <lokpraw_dataZawieszeniaDzialalnosci />
+    <lokpraw_dataWznowieniaDzialalnosci />
+    <lokpraw_dataZaistnieniaZmiany>2008-11-25</lokpraw_dataZaistnieniaZmiany>
+    <lokpraw_dataZakonczeniaDzialalnosci />
+    <lokpraw_dataSkresleniaZRegon />
+    <lokpraw_adSiedzKraj_Symbol>PL</lokpraw_adSiedzKraj_Symbol>
+    <lokpraw_adSiedzWojewodztwo_Symbol>24</lokpraw_adSiedzWojewodztwo_Symbol>
+    <lokpraw_adSiedzPowiat_Symbol>69</lokpraw_adSiedzPowiat_Symbol>
+    <lokpraw_adSiedzGmina_Symbol>011</lokpraw_adSiedzGmina_Symbol>
+    <lokpraw_adSiedzKodPocztowy>40026</lokpraw_adSiedzKodPocztowy>
+    <lokpraw_adSiedzMiejscowoscPoczty_Symbol>0937474</lokpraw_adSiedzMiejscowoscPoczty_Symbol>
+    <lokpraw_adSiedzMiejscowosc_Symbol>0937474</lokpraw_adSiedzMiejscowosc_Symbol>
+    <lokpraw_adSiedzUlica_Symbol>24261</lokpraw_adSiedzUlica_Symbol>
+    <lokpraw_adSiedzNumerNieruchomosci>7</lokpraw_adSiedzNumerNieruchomosci>
+    <lokpraw_adSiedzNumerLokalu />
+    <lokpraw_adSiedzNietypoweMiejsceLokalizacji />
+    <lokpraw_adSiedzKraj_Nazwa>POLSKA</lokpraw_adSiedzKraj_Nazwa>
+    <lokpraw_adSiedzWojewodztwo_Nazwa>ŚLĄSKIE</lokpraw_adSiedzWojewodztwo_Nazwa>
+    <lokpraw_adSiedzPowiat_Nazwa>m. Katowice</lokpraw_adSiedzPowiat_Nazwa>
+    <lokpraw_adSiedzGmina_Nazwa>M. Katowice</lokpraw_adSiedzGmina_Nazwa>
+    <lokpraw_adSiedzMiejscowosc_Nazwa>Katowice</lokpraw_adSiedzMiejscowosc_Nazwa>
+    <lokpraw_adSiedzMiejscowoscPoczty_Nazwa>Katowice</lokpraw_adSiedzMiejscowoscPoczty_Nazwa>
+    <lokpraw_adSiedzUlica_Nazwa>ul. Test-Wilcza</lokpraw_adSiedzUlica_Nazwa>
+    <lokpraw_formaFinansowania_Symbol>0</lokpraw_formaFinansowania_Symbol>
+    <lokpraw_organRejestrowy_Symbol>021270000</lokpraw_organRejestrowy_Symbol>
+    <lokpraw_rodzajRejestruEwidencji_Symbol>036</lokpraw_rodzajRejestruEwidencji_Symbol>
+    <lokpraw_formaFinansowania_Nazwa>JEDNOSTKA LOKALNA NIE BILANSUJĄCA SAMODZIELNIE</lokpraw_formaFinansowania_Nazwa>
+    <lokpraw_organRejestrowy_Nazwa>OKRĘGOWA RADA APTEKARSKA KATOWICE</lokpraw_organRejestrowy_Nazwa>
+    <lokpraw_rodzajRejestruEwidencji_Nazwa>REJESTR APTEK</lokpraw_rodzajRejestruEwidencji_Nazwa>
+  </dane>
+</root>
+
+<!-- BIR11JednLokalnaOsPrawnejPkd -->
+
+<root>
+  <dane>
+    <lokpraw_pkdKod>4773Z</lokpraw_pkdKod>
+    <lokpraw_pkdNazwa>SPRZEDAŻ DETALICZNA WYROBÓW FARMACEUTYCZNYCH PROWADZONA W WYSPECJALIZOWANYCH SKLEPACH</lokpraw_pkdNazwa>
+    <lokpraw_pkdPrzewazajace>1</lokpraw_pkdPrzewazajace>
+  </dane>
+  <dane>
+    <lokpraw_pkdKod>2120Z</lokpraw_pkdKod>
+    <lokpraw_pkdNazwa>PRODUKCJA LEKÓW I POZOSTAŁYCH WYROBÓW FARMACEUTYCZNYCH</lokpraw_pkdNazwa>
+    <lokpraw_pkdPrzewazajace>0</lokpraw_pkdPrzewazajace>
+  </dane>
+</root>
+
+<!-- BIR11OsPrawnaSpCywilnaWspolnicy -->
+
+<root>
+  <dane>
+    <wspolsc_regonWspolnikSpolki>142111956</wspolsc_regonWspolnikSpolki>
+    <wspolsc_imiePierwsze>PAWEŁ</wspolsc_imiePierwsze>
+    <wspolsc_imieDrugie>MARIUSZ</wspolsc_imieDrugie>
+    <wspolsc_nazwisko>XXXXXXXX</wspolsc_nazwisko>
+    <wspolsc_firmaNazwa>"SKARBEK S.C."- PAWEŁ XXXXXXXX wspólnik spółki cywilnej</wspolsc_firmaNazwa>
+  </dane>
+  <dane>
+    <wspolsc_regonWspolnikSpolki>146672433</wspolsc_regonWspolnikSpolki>
+    <wspolsc_imiePierwsze>IWONA</wspolsc_imiePierwsze>
+    <wspolsc_imieDrugie>KRYSTYNA</wspolsc_imieDrugie>
+    <wspolsc_nazwisko>XXXXXXXX</wspolsc_nazwisko>
+    <wspolsc_firmaNazwa>IWONA XXXXXXXX-wspólnik spółki cywilnej "SKARBEK S.C. Iwona XXXXXXXX Paweł XXXXXXXX"</wspolsc_firmaNazwa>
+  </dane>
+</root>
+
+
+<!-- ================================================================================  -->
+<!-- ================================================================================  -->
+<!-- ================================================================================  -->
+<!-- ================================================================================  -->
+
+<!-- ============ 2b)  raporty metody DanePobierzPelnyRaport dot. osoby fizycznej ================= -->
+
+<!-- Raport BIR11OsFizycznaDaneOgolne  -->
+
+<root>
+  <dane>
+    <fiz_regon9>xxxxxxxxx</fiz_regon9>
+    <fiz_nip>nnnnnnnnnn</fiz_nip>
+    <fiz_statusNip />
+    <fiz_nazwisko>TEST-ZIELIŃSKI</fiz_nazwisko>
+    <fiz_imie1>ZBIGNIEW</fiz_imie1>
+    <fiz_imie2 />
+    <fiz_dataWpisuPodmiotuDoRegon />
+    <fiz_dataZaistnieniaZmiany>2011-08-08</fiz_dataZaistnieniaZmiany>
+    <fiz_dataSkresleniaPodmiotuZRegon />
+    <fiz_podstawowaFormaPrawna_Symbol>9</fiz_podstawowaFormaPrawna_Symbol>
+    <fiz_szczegolnaFormaPrawna_Symbol>99</fiz_szczegolnaFormaPrawna_Symbol>
+    <fiz_formaFinansowania_Symbol>1</fiz_formaFinansowania_Symbol>
+    <fiz_formaWlasnosci_Symbol>214</fiz_formaWlasnosci_Symbol>
+    <fiz_podstawowaFormaPrawna_Nazwa>OSOBA FIZYCZNA PROWADZĄCA DZIAŁALNOŚĆ GOSPODARCZĄ</fiz_podstawowaFormaPrawna_Nazwa>
+    <fiz_szczegolnaFormaPrawna_Nazwa>BEZ SZCZEGÓLNEJ FORMY PRAWNEJ</fiz_szczegolnaFormaPrawna_Nazwa>
+    <fiz_formaFinansowania_Nazwa>JEDNOSTKA SAMOFINANSUJĄCA NIE BĘDĄCA JEDNOSTKĄ BUDŻETOWĄ LUB SAMORZĄDOWYM ZAKŁADEM BUDŻETOWYM</fiz_formaFinansowania_Nazwa>
+    <fiz_formaWlasnosci_Nazwa>WŁASNOŚĆ KRAJOWYCH OSÓB FIZYCZNYCH</fiz_formaWlasnosci_Nazwa>
+    <fiz_dzialalnoscCeidg>1</fiz_dzialalnoscCeidg>
+    <fiz_dzialalnoscRolnicza>1</fiz_dzialalnoscRolnicza>
+    <fiz_dzialalnoscPozostala>0</fiz_dzialalnoscPozostala>
+    <fiz_dzialalnoscSkreslonaDo20141108>0</fiz_dzialalnoscSkreslonaDo20141108>
+    <fiz_liczbaJednLokalnych>2</fiz_liczbaJednLokalnych>
+  </dane>
+</root>
+
+<!-- Raport BIR11OsFizycznaDzialalnoscCeidg -->
+
+<root>
+  <dane>
+    <fiz_regon9>yyyyyyyyy</fiz_regon9>
+    <fiz_nazwa>MIKOŁAJ XXXXXXXX "MELISSA"</fiz_nazwa>
+    <fiz_nazwaSkrocona>MIKOŁAJ XXXXXXXX</fiz_nazwaSkrocona>
+    <fiz_dataPowstania>2001-10-16</fiz_dataPowstania>
+    <fiz_dataRozpoczeciaDzialalnosci>2001-11-15</fiz_dataRozpoczeciaDzialalnosci>
+    <fiz_dataWpisuDzialalnosciDoRegon />
+    <fiz_dataZawieszeniaDzialalnosci />
+    <fiz_dataWznowieniaDzialalnosci />
+    <fiz_dataZaistnieniaZmianyDzialalnosci>2012-12-11</fiz_dataZaistnieniaZmianyDzialalnosci>
+    <fiz_dataZakonczeniaDzialalnosci />
+    <fiz_dataSkresleniaDzialalnosciZRegon />
+    <fiz_dataOrzeczeniaOUpadlosci />
+    <fiz_dataZakonczeniaPostepowaniaUpadlosciowego />
+    <fiz_adSiedzKraj_Symbol />
+    <fiz_adSiedzWojewodztwo_Symbol>10</fiz_adSiedzWojewodztwo_Symbol>
+    <fiz_adSiedzPowiat_Symbol>61</fiz_adSiedzPowiat_Symbol>
+    <fiz_adSiedzGmina_Symbol>059</fiz_adSiedzGmina_Symbol>
+    <fiz_adSiedzKodPocztowy>91409</fiz_adSiedzKodPocztowy>
+    <fiz_adSiedzMiejscowoscPoczty_Symbol>0958430</fiz_adSiedzMiejscowoscPoczty_Symbol>
+    <fiz_adSiedzMiejscowosc_Symbol>0958430</fiz_adSiedzMiejscowosc_Symbol>
+    <fiz_adSiedzUlica_Symbol>24261</fiz_adSiedzUlica_Symbol>
+    <fiz_adSiedzNumerNieruchomosci>80</fiz_adSiedzNumerNieruchomosci>
+    <fiz_adSiedzNumerLokalu />
+    <fiz_adSiedzNietypoweMiejsceLokalizacji />
+    <fiz_numerTelefonu />
+    <fiz_numerWewnetrznyTelefonu />
+    <fiz_numerFaksu />
+    <fiz_adresEmail />
+    <fiz_adresStronyinternetowej />
+    <fiz_adSiedzKraj_Nazwa />
+    <fiz_adSiedzWojewodztwo_Nazwa>ŁÓDZKIE</fiz_adSiedzWojewodztwo_Nazwa>
+    <fiz_adSiedzPowiat_Nazwa>m. Łódź</fiz_adSiedzPowiat_Nazwa>
+    <fiz_adSiedzGmina_Nazwa>Łódź-Śródmieście</fiz_adSiedzGmina_Nazwa>
+    <fiz_adSiedzMiejscowosc_Nazwa>Łódź</fiz_adSiedzMiejscowosc_Nazwa>
+    <fiz_adSiedzMiejscowoscPoczty_Nazwa>Łódź</fiz_adSiedzMiejscowoscPoczty_Nazwa>
+    <fiz_adSiedzUlica_Nazwa>ul. Test-Wilcza</fiz_adSiedzUlica_Nazwa>
+    <fizC_dataWpisuDoRejestruEwidencji>2011-12-22</fizC_dataWpisuDoRejestruEwidencji>
+    <fizC_dataSkresleniaZRejestruEwidencji />
+    <fizC_numerWRejestrzeEwidencji>011509413/2011 </fizC_numerWRejestrzeEwidencji>
+    <fizC_OrganRejestrowy_Symbol>032000000</fizC_OrganRejestrowy_Symbol>
+    <fizC_OrganRejestrowy_Nazwa>MINISTER GOSPODARKI</fizC_OrganRejestrowy_Nazwa>
+    <fizC_RodzajRejestru_Symbol>151</fizC_RodzajRejestru_Symbol>
+    <fizC_RodzajRejestru_Nazwa>CENTRALNA EWIDENCJA I INFORMACJA O DZIAŁALNOŚCI GOSPODARCZEJ</fizC_RodzajRejestru_Nazwa>
+    <fizC_NiePodjetoDzialalnosci>false</fizC_NiePodjetoDzialalnosci>
+  </dane>
+</root>
+
+<!-- BIR11OsFizycznaDzialalnoscRolnicza -->
+
+<root>
+  <dane>
+    <fiz_regon9>xxxxxxxxx</fiz_regon9>
+    <fiz_nazwa>GOSPODARSTWO ROLNE</fiz_nazwa>
+    <fiz_nazwaSkrocona />
+    <fiz_dataPowstania>1999-05-15</fiz_dataPowstania>
+    <fiz_dataRozpoczeciaDzialalnosci>1999-05-15</fiz_dataRozpoczeciaDzialalnosci>
+    <fiz_dataWpisuDzialalnosciDoRegon />
+    <fiz_dataZawieszeniaDzialalnosci />
+    <fiz_dataWznowieniaDzialalnosci />
+    <fiz_dataZaistnieniaZmianyDzialalnosci>2009-05-18</fiz_dataZaistnieniaZmianyDzialalnosci>
+    <fiz_dataZakonczeniaDzialalnosci />
+    <fiz_dataSkresleniaDzialalanosciZRegon />
+    <fiz_dataOrzeczeniaOUpadlosci />
+    <fiz_dataZakonczeniaPostepowaniaUpadlosciowego />
+    <fiz_adSiedzKraj_Symbol />
+    <fiz_adSiedzWojewodztwo_Symbol>06</fiz_adSiedzWojewodztwo_Symbol>
+    <fiz_adSiedzPowiat_Symbol>07</fiz_adSiedzPowiat_Symbol>
+    <fiz_adSiedzGmina_Symbol>102</fiz_adSiedzGmina_Symbol>
+    <fiz_adSiedzKodPocztowy>23213</fiz_adSiedzKodPocztowy>
+    <fiz_adSiedzMiejscowoscPoczty_Symbol>0394312</fiz_adSiedzMiejscowoscPoczty_Symbol>
+    <fiz_adSiedzMiejscowosc_Symbol>0394275</fiz_adSiedzMiejscowosc_Symbol>
+    <fiz_adSiedzUlica_Symbol />
+    <fiz_adSiedzNumerNieruchomosci>XX</fiz_adSiedzNumerNieruchomosci>
+    <fiz_adSiedzNumerLokalu />
+    <fiz_adSiedzNietypoweMiejsceLokalizacji />
+    <fiz_numerTelefonu />
+    <fiz_numerWewnetrznyTelefonu />
+    <fiz_numerFaksu />
+    <fiz_adresEmail />
+    <fiz_adresStronyinternetowej />
+    <fiz_adSiedzKraj_Nazwa />
+    <fiz_adSiedzWojewodztwo_Nazwa>LUBELSKIE</fiz_adSiedzWojewodztwo_Nazwa>
+    <fiz_adSiedzPowiat_Nazwa>kraśnicki</fiz_adSiedzPowiat_Nazwa>
+    <fiz_adSiedzGmina_Nazwa>Zakrzówek</fiz_adSiedzGmina_Nazwa>
+    <fiz_adSiedzMiejscowosc_Nazwa>Sulów</fiz_adSiedzMiejscowosc_Nazwa>
+    <fiz_adSiedzMiejscowoscPoczty_Nazwa>Zakrzówek</fiz_adSiedzMiejscowoscPoczty_Nazwa>
+    <fiz_adSiedzUlica_Nazwa />
+  </dane>
+</root>
+
+  <!-- BIR11OsFizycznaDzialalnoscPozostala -->
+
+<root>
+  <dane>
+    <fiz_regon9>zzzzzzzzz</fiz_regon9>
+    <fiz_nazwa>GOSPODARSTWO AGROTURYSTYCZNE, IRENA XXXXXXXX</fiz_nazwa>
+    <fiz_nazwaSkrocona>GOSPODARSTWO AGROTURYSTYCZNE</fiz_nazwaSkrocona>
+    <fiz_dataPowstania>1978-03-21</fiz_dataPowstania>
+    <fiz_dataRozpoczeciaDzialalnosci>1978-03-21</fiz_dataRozpoczeciaDzialalnosci>
+    <fiz_dataWpisuDzialalnosciDoRegon />
+    <fiz_dataZawieszeniaDzialalnosci />
+    <fiz_dataWznowieniaDzialalnosci />
+    <fiz_dataZaistnieniaZmianyDzialalnosci>1978-03-21</fiz_dataZaistnieniaZmianyDzialalnosci>
+    <fiz_dataZakonczeniaDzialalnosci />
+    <fiz_dataSkresleniaDzialalnosciZRegon />
+    <fiz_dataOrzeczeniaOUpadlosci />
+    <fiz_dataZakonczeniaPostepowaniaUpadlosciowego />
+    <fiz_adSiedzKraj_Symbol />
+    <fiz_adSiedzWojewodztwo_Symbol>30</fiz_adSiedzWojewodztwo_Symbol>
+    <fiz_adSiedzPowiat_Symbol>02</fiz_adSiedzPowiat_Symbol>
+    <fiz_adSiedzGmina_Symbol>045</fiz_adSiedzGmina_Symbol>
+    <fiz_adSiedzKodPocztowy>64761</fiz_adSiedzKodPocztowy>
+    <fiz_adSiedzMiejscowoscPoczty_Symbol>0966961</fiz_adSiedzMiejscowoscPoczty_Symbol>
+    <fiz_adSiedzMiejscowosc_Symbol>0526825</fiz_adSiedzMiejscowosc_Symbol>
+    <fiz_adSiedzUlica_Symbol />
+    <fiz_adSiedzNumerNieruchomosci>XX</fiz_adSiedzNumerNieruchomosci>
+    <fiz_adSiedzNumerLokalu />
+    <fiz_adSiedzNietypoweMiejsceLokalizacji />
+    <fiz_numerTelefonu />
+    <fiz_numerWewnetrznyTelefonu />
+    <fiz_numerFaksu />
+    <fiz_adresEmail />
+    <fiz_adresStronyinternetowej />
+    <fiz_adSiedzKraj_Nazwa />
+    <fiz_adSiedzWojewodztwo_Nazwa>WIELKOPOLSKIE</fiz_adSiedzWojewodztwo_Nazwa>
+    <fiz_adSiedzPowiat_Nazwa>czarnkowsko-trzcianecki</fiz_adSiedzPowiat_Nazwa>
+    <fiz_adSiedzGmina_Nazwa>Krzyż Wielkopolski</fiz_adSiedzGmina_Nazwa>
+    <fiz_adSiedzMiejscowosc_Nazwa>Huta Szklana</fiz_adSiedzMiejscowosc_Nazwa>
+    <fiz_adSiedzMiejscowoscPoczty_Nazwa>Krzyż Wielkopolski</fiz_adSiedzMiejscowoscPoczty_Nazwa>
+    <fiz_adSiedzUlica_Nazwa />
+    <fizP_dataWpisuDoRejestruEwidencji />
+    <fizP_numerWRejestrzeEwidencji />
+    <fizP_OrganRejestrowy_Symbol />
+    <fizP_OrganRejestrowy_Nazwa />
+    <fizP_RodzajRejestru_Symbol>099</fizP_RodzajRejestru_Symbol>
+    <fizP_RodzajRejestru_Nazwa>PODMIOTY NIE PODLEGAJĄCE WPISOM DO REJESTRU LUB EWIDENCJI</fizP_RodzajRejestru_Nazwa>
+  </dane>
+</root>
+
+<!-- BIR11OsFizycznaDzialalnoscSkreslonaDo20141108 -->
+
+<root>
+  <dane>
+    <fiz_regon9>vvvvvvvvv</fiz_regon9>
+    <fiz_nazwa>APTEKA ANNA XXXXXXXX</fiz_nazwa>
+    <fiz_nazwaSkrocona />
+    <fiz_dataPowstania />
+    <fiz_dataRozpoczeciaDzialalnosci />
+    <fiz_dataWpisuDzialalnosciDoRegon />
+    <fiz_dataZawieszeniaDzialalnosci />
+    <fiz_dataWznowieniaDzialalnosci />
+    <fiz_dataZaistnieniaZmianyDzialalnosci />
+    <fiz_dataZakonczeniaDzialalnosci>2014-08-19</fiz_dataZakonczeniaDzialalnosci>
+    <fiz_dataSkresleniaDzialalnosciZRegon />
+    <fiz_adSiedzKraj_Symbol />
+    <fiz_adSiedzWojewodztwo_Symbol>14</fiz_adSiedzWojewodztwo_Symbol>
+    <fiz_adSiedzPowiat_Symbol>65</fiz_adSiedzPowiat_Symbol>
+    <fiz_adSiedzGmina_Symbol>068</fiz_adSiedzGmina_Symbol>
+    <fiz_adSiedzKodPocztowy>02353</fiz_adSiedzKodPocztowy>
+    <fiz_adSiedzMiejscowoscPoczty_Symbol>0918643</fiz_adSiedzMiejscowoscPoczty_Symbol>
+    <fiz_adSiedzMiejscowosc_Symbol>0918643</fiz_adSiedzMiejscowosc_Symbol>
+    <fiz_adSiedzUlica_Symbol>10013</fiz_adSiedzUlica_Symbol>
+    <fiz_adSiedzNumerNieruchomosci>33</fiz_adSiedzNumerNieruchomosci>
+    <fiz_adSiedzNumerLokalu />
+    <fiz_adSiedzNietypoweMiejsceLokalizacji />
+    <fiz_numerTelefonu />
+    <fiz_numerWewnetrznyTelefonu />
+    <fiz_numerFaksu />
+    <fiz_adresEmail />
+    <fiz_adresStronyinternetowej />
+    <fiz_adresEmail2 />
+    <fiz_adSiedzKraj_Nazwa />
+    <fiz_adSiedzWojewodztwo_Nazwa>MAZOWIECKIE</fiz_adSiedzWojewodztwo_Nazwa>
+    <fiz_adSiedzPowiat_Nazwa>m. st. Warszawa</fiz_adSiedzPowiat_Nazwa>
+    <fiz_adSiedzGmina_Nazwa>Ochota</fiz_adSiedzGmina_Nazwa>
+    <fiz_adSiedzMiejscowosc_Nazwa>Warszawa</fiz_adSiedzMiejscowosc_Nazwa>
+    <fiz_adSiedzMiejscowoscPoczty_Nazwa>Warszawa</fiz_adSiedzMiejscowoscPoczty_Nazwa>
+    <fiz_adSiedzUlica_Nazwa>ul. Test-Krucza</fiz_adSiedzUlica_Nazwa>
+  </dane>
+</root>
+ 
+ <!-- BIR11OsFizycznaPkd -->
+ 
+<root>
+  <dane>
+    <fiz_pkd_Kod>4941Z</fiz_pkd_Kod>
+    <fiz_pkd_Nazwa>TRANSPORT DROGOWY TOWARÓW</fiz_pkd_Nazwa>
+    <fiz_pkd_Przewazajace>1</fiz_pkd_Przewazajace>
+    <fiz_SilosID>1</fiz_SilosID>
+    <fiz_Silos_Symbol>CEIDG</fiz_Silos_Symbol>
+    <fiz_dataSkresleniaDzialalnosciZRegon />
+  </dane>
+  <dane>
+    <fiz_pkd_Kod>0150Z</fiz_pkd_Kod>
+    <fiz_pkd_Nazwa>UPRAWY ROLNE POŁĄCZONE Z CHOWEM I HODOWLĄ ZWIERZĄT (DZIAŁALNOŚĆ MIESZANA)</fiz_pkd_Nazwa>
+    <fiz_pkd_Przewazajace>1</fiz_pkd_Przewazajace>
+    <fiz_SilosID>2</fiz_SilosID>
+    <fiz_Silos_Symbol>Rolnicza</fiz_Silos_Symbol>
+    <fiz_dataSkresleniaDzialalnosciZRegon />
+  </dane>
+  <dane>
+    <fiz_pkd_Kod>4939Z</fiz_pkd_Kod>
+    <fiz_pkd_Nazwa>POZOSTAŁY TRANSPORT LĄDOWY PASAŻERSKI, GDZIE INDZIEJ NIESKLASYFIKOWANY</fiz_pkd_Nazwa>
+    <fiz_pkd_Przewazajace>0</fiz_pkd_Przewazajace>
+    <fiz_SilosID>1</fiz_SilosID>
+    <fiz_Silos_Symbol>CEIDG</fiz_Silos_Symbol>
+    <fiz_dataSkresleniaDzialalnosciZRegon />
+  </dane>
+</root>
+
+<!-- BIR11OsFizycznaPkd -->
+
+<root>
+  <dane>
+    <fiz_pkd_Kod>4773Z</fiz_pkd_Kod>
+    <fiz_pkd_Nazwa>SPRZEDAŻ DETALICZNA WYROBÓW FARMACEUTYCZNYCH PROWADZONA W WYSPECJALIZOWANYCH SKLEPACH</fiz_pkd_Nazwa>
+    <fiz_pkd_Przewazajace>1</fiz_pkd_Przewazajace>
+    <fiz_SilosID>1</fiz_SilosID>
+    <fiz_Silos_Symbol>CEIDG</fiz_Silos_Symbol>
+    <fiz_dataSkresleniaDzialalnosciZRegon />
+  </dane>
+  <dane>
+    <fiz_pkd_Kod>4774Z</fiz_pkd_Kod>
+    <fiz_pkd_Nazwa>SPRZEDAŻ DETALICZNA WYROBÓW MEDYCZNYCH, WŁĄCZAJĄC ORTOPEDYCZNE, PROWADZONA W WYSPECJALIZOWANYCH SKLEPACH</fiz_pkd_Nazwa>
+    <fiz_pkd_Przewazajace>0</fiz_pkd_Przewazajace>
+    <fiz_SilosID>1</fiz_SilosID>
+    <fiz_Silos_Symbol>CEIDG</fiz_Silos_Symbol>
+    <fiz_dataSkresleniaDzialalnosciZRegon />
+  </dane>
+  <dane>
+    <fiz_pkd_Kod>4775Z</fiz_pkd_Kod>
+    <fiz_pkd_Nazwa>SPRZEDAŻ DETALICZNA KOSMETYKÓW I ARTYKUŁÓW TOALETOWYCH PROWADZONA W WYSPECJALIZOWANYCH SKLEPACH</fiz_pkd_Nazwa>
+    <fiz_pkd_Przewazajace>0</fiz_pkd_Przewazajace>
+    <fiz_SilosID>1</fiz_SilosID>
+    <fiz_Silos_Symbol>CEIDG</fiz_Silos_Symbol>
+    <fiz_dataSkresleniaDzialalnosciZRegon />
+  </dane>
+  <dane>
+</root>
+
+<!-- BIR11OsFizycznaListaJednLokalnych -->
+
+<root>
+  <dane>
+    <lokfiz_regon14>xxxxxxxxxx00039</lokfiz_regon14>
+    <lokfiz_nazwa>ARMATURA MIKOŁAJ XXXXXXXX</lokfiz_nazwa>
+    <lokfiz_silosID>1</lokfiz_silosID>
+    <lokfiz_silos_Symbol>CEIDG</lokfiz_silos_Symbol>
+    <lokfiz_adSiedzKraj_Symbol>PL</lokfiz_adSiedzKraj_Symbol>
+    <lokfiz_adSiedzWojewodztwo_Symbol>10</lokfiz_adSiedzWojewodztwo_Symbol>
+    <lokfiz_adSiedzPowiat_Symbol>61</lokfiz_adSiedzPowiat_Symbol>
+    <lokfiz_adSiedzGmina_Symbol>059</lokfiz_adSiedzGmina_Symbol>
+    <lokfiz_adSiedzKodPocztowy>90102</lokfiz_adSiedzKodPocztowy>
+    <lokfiz_adSiedzMiejscowoscPoczty_Symbol>0958430</lokfiz_adSiedzMiejscowoscPoczty_Symbol>
+    <lokfiz_adSiedzMiejscowosc_Symbol>0958430</lokfiz_adSiedzMiejscowosc_Symbol>
+    <lokfiz_adSiedzUlica_Symbol>10013</lokfiz_adSiedzUlica_Symbol>
+    <lokfiz_adSiedzNumerNieruchomosci>80</lokfiz_adSiedzNumerNieruchomosci>
+    <lokfiz_adSiedzNumerLokalu />
+    <lokfiz_adSiedzNietypoweMiejsceLokalizacji />
+    <lokfiz_adSiedzWojewodztwo_Nazwa>ŁÓDZKIE</lokfiz_adSiedzWojewodztwo_Nazwa>
+    <lokfiz_adSiedzPowiat_Nazwa>m. Łódź</lokfiz_adSiedzPowiat_Nazwa>
+    <lokfiz_adSiedzGmina_Nazwa>Łódź-Śródmieście</lokfiz_adSiedzGmina_Nazwa>
+    <lokfiz_adSiedzMiejscowosc_Nazwa>Łódź</lokfiz_adSiedzMiejscowosc_Nazwa>
+    <lokfiz_adSiedzMiejscowoscPoczty_Nazwa>Łódź</lokfiz_adSiedzMiejscowoscPoczty_Nazwa>
+    <lokfiz_adSiedzUlica_Nazwa>ul.Test-Krucza</lokfiz_adSiedzUlica_Nazwa>
+    <lokfiz_dataPowstania>2011-12-21</lokfiz_dataPowstania>
+    <lokfiz_dataRozpoczeciaDzialalnosci>2011-12-21</lokfiz_dataRozpoczeciaDzialalnosci>
+    <lokfiz_dataWpisuDoRegon>2011-12-23</lokfiz_dataWpisuDoRegon>
+    <lokfiz_dataZawieszeniaDzialalnosci />
+    <lokfiz_dataWznowieniaDzialalnosci />
+    <lokfiz_dataZakonczeniaDzialalnosci />
+    <lokfiz_dataSkresleniaZRegon />
+  </dane>
+  <dane>
+    <lokfiz_regon14>xxxxxxxxxx00060</lokfiz_regon14>
+    <lokfiz_nazwa>Apteka "MELISSA"</lokfiz_nazwa>
+    <lokfiz_silosID>1</lokfiz_silosID>
+    <lokfiz_silos_Symbol>CEIDG</lokfiz_silos_Symbol>
+    <lokfiz_adSiedzKraj_Symbol>PL</lokfiz_adSiedzKraj_Symbol>
+    <lokfiz_adSiedzWojewodztwo_Symbol>10</lokfiz_adSiedzWojewodztwo_Symbol>
+    <lokfiz_adSiedzPowiat_Symbol>61</lokfiz_adSiedzPowiat_Symbol>
+    <lokfiz_adSiedzGmina_Symbol>029</lokfiz_adSiedzGmina_Symbol>
+    <lokfiz_adSiedzKodPocztowy>91839</lokfiz_adSiedzKodPocztowy>
+    <lokfiz_adSiedzMiejscowoscPoczty_Symbol>0957666</lokfiz_adSiedzMiejscowoscPoczty_Symbol>
+    <lokfiz_adSiedzMiejscowosc_Symbol>0957666</lokfiz_adSiedzMiejscowosc_Symbol>
+    <lokfiz_adSiedzUlica_Symbol>10013</lokfiz_adSiedzUlica_Symbol>
+    <lokfiz_adSiedzNumerNieruchomosci>29/31     </lokfiz_adSiedzNumerNieruchomosci>
+    <lokfiz_adSiedzNumerLokalu>A         </lokfiz_adSiedzNumerLokalu>
+    <lokfiz_adSiedzNietypoweMiejsceLokalizacji />
+    <lokfiz_adSiedzWojewodztwo_Nazwa>ŁÓDZKIE</lokfiz_adSiedzWojewodztwo_Nazwa>
+    <lokfiz_adSiedzPowiat_Nazwa>m. Łódź</lokfiz_adSiedzPowiat_Nazwa>
+    <lokfiz_adSiedzGmina_Nazwa>Łódź-Bałuty</lokfiz_adSiedzGmina_Nazwa>
+    <lokfiz_adSiedzMiejscowosc_Nazwa>Łódź</lokfiz_adSiedzMiejscowosc_Nazwa>
+    <lokfiz_adSiedzMiejscowoscPoczty_Nazwa>Łódź</lokfiz_adSiedzMiejscowoscPoczty_Nazwa>
+    <lokfiz_adSiedzUlica_Nazwa>ul.Test-Krucza</lokfiz_adSiedzUlica_Nazwa>
+    <lokfiz_dataPowstania>2012-12-11</lokfiz_dataPowstania>
+    <lokfiz_dataRozpoczeciaDzialalnosci>2012-12-11</lokfiz_dataRozpoczeciaDzialalnosci>
+    <lokfiz_dataWpisuDoRegon>2012-12-13</lokfiz_dataWpisuDoRegon>
+    <lokfiz_dataZawieszeniaDzialalnosci />
+    <lokfiz_dataWznowieniaDzialalnosci />
+    <lokfiz_dataZakonczeniaDzialalnosci />
+    <lokfiz_dataSkresleniaZRegon />
+  </dane>
+  <dane>
+    <lokfiz_regon14>xxxxxxxxxx00078</lokfiz_regon14>
+    <lokfiz_nazwa>Drogeria "MELISSA"</lokfiz_nazwa>
+    <lokfiz_silosID>1</lokfiz_silosID>
+    <lokfiz_silos_Symbol>CEIDG</lokfiz_silos_Symbol>
+    <lokfiz_adSiedzKraj_Symbol>PL</lokfiz_adSiedzKraj_Symbol>
+    <lokfiz_adSiedzWojewodztwo_Symbol>10</lokfiz_adSiedzWojewodztwo_Symbol>
+    <lokfiz_adSiedzPowiat_Symbol>61</lokfiz_adSiedzPowiat_Symbol>
+    <lokfiz_adSiedzGmina_Symbol>029</lokfiz_adSiedzGmina_Symbol>
+    <lokfiz_adSiedzKodPocztowy>91839</lokfiz_adSiedzKodPocztowy>
+    <lokfiz_adSiedzMiejscowoscPoczty_Symbol>0957666</lokfiz_adSiedzMiejscowoscPoczty_Symbol>
+    <lokfiz_adSiedzMiejscowosc_Symbol>0957666</lokfiz_adSiedzMiejscowosc_Symbol>
+    <lokfiz_adSiedzUlica_Symbol>10013</lokfiz_adSiedzUlica_Symbol>
+    <lokfiz_adSiedzNumerNieruchomosci>29/31     </lokfiz_adSiedzNumerNieruchomosci>
+    <lokfiz_adSiedzNumerLokalu>B         </lokfiz_adSiedzNumerLokalu>
+    <lokfiz_adSiedzNietypoweMiejsceLokalizacji />
+    <lokfiz_adSiedzWojewodztwo_Nazwa>ŁÓDZKIE</lokfiz_adSiedzWojewodztwo_Nazwa>
+    <lokfiz_adSiedzPowiat_Nazwa>m. Łódź</lokfiz_adSiedzPowiat_Nazwa>
+    <lokfiz_adSiedzGmina_Nazwa>Łódź-Bałuty</lokfiz_adSiedzGmina_Nazwa>
+    <lokfiz_adSiedzMiejscowosc_Nazwa>Łódź</lokfiz_adSiedzMiejscowosc_Nazwa>
+    <lokfiz_adSiedzMiejscowoscPoczty_Nazwa>Łódź</lokfiz_adSiedzMiejscowoscPoczty_Nazwa>
+    <lokfiz_adSiedzUlica_Nazwa>ul.Test-Krucza</lokfiz_adSiedzUlica_Nazwa>
+    <lokfiz_dataPowstania>2012-12-11</lokfiz_dataPowstania>
+    <lokfiz_dataRozpoczeciaDzialalnosci>2012-12-11</lokfiz_dataRozpoczeciaDzialalnosci>
+    <lokfiz_dataWpisuDoRegon>2012-12-13</lokfiz_dataWpisuDoRegon>
+    <lokfiz_dataZawieszeniaDzialalnosci />
+    <lokfiz_dataWznowieniaDzialalnosci />
+    <lokfiz_dataZakonczeniaDzialalnosci />
+    <lokfiz_dataSkresleniaZRegon />
+  </dane>
+</root>
+<!-- BIR11JednLokalnaOsFizycznej -->
+
+<root>
+  <dane>
+    <lokfiz_regon14>xxxxxxxxxx00039</lokfiz_regon14>
+    <lokfiz_nazwa>MEBLE MIKOŁAJ XXXXXXXX</lokfiz_nazwa>
+    <lokfiz_silosID>1</lokfiz_silosID>
+    <lokfiz_silos_Nazwa>CEIDG</lokfiz_silos_Nazwa>
+    <lokfiz_dataPowstania>2011-12-21</lokfiz_dataPowstania>
+    <lokfiz_dataRozpoczeciaDzialalnosci>2011-12-21</lokfiz_dataRozpoczeciaDzialalnosci>
+    <lokfiz_dataWpisuDoRegon>2011-12-23</lokfiz_dataWpisuDoRegon>
+    <lokfiz_dataZawieszeniaDzialalnosci />
+    <lokfiz_dataWznowieniaDzialalnosci />
+    <lokfiz_dataZaistnieniaZmiany>2012-01-18</lokfiz_dataZaistnieniaZmiany>
+    <lokfiz_dataZakonczeniaDzialalnosci />
+    <lokfiz_dataSkresleniaZRegon />
+    <lokfiz_adSiedzKraj_Symbol>PL</lokfiz_adSiedzKraj_Symbol>
+    <lokfiz_adSiedzWojewodztwo_Symbol>10</lokfiz_adSiedzWojewodztwo_Symbol>
+    <lokfiz_adSiedzPowiat_Symbol>61</lokfiz_adSiedzPowiat_Symbol>
+    <lokfiz_adSiedzGmina_Symbol>059</lokfiz_adSiedzGmina_Symbol>
+    <lokfiz_adSiedzKodPocztowy>90102</lokfiz_adSiedzKodPocztowy>
+    <lokfiz_adSiedzMiejscowoscPoczty_Symbol>0958430</lokfiz_adSiedzMiejscowoscPoczty_Symbol>
+    <lokfiz_adSiedzMiejscowosc_Symbol>0958430</lokfiz_adSiedzMiejscowosc_Symbol>
+    <lokfiz_adSiedzUlica_Symbol>10013</lokfiz_adSiedzUlica_Symbol>
+    <lokfiz_adSiedzNumerNieruchomosci>80</lokfiz_adSiedzNumerNieruchomosci>
+    <lokfiz_adSiedzNumerLokalu />
+    <lokfiz_adSiedzNietypoweMiejsceLokalizacji />
+    <lokfiz_adSiedzKraj_Nazwa>POLSKA</lokfiz_adSiedzKraj_Nazwa>
+    <lokfiz_adSiedzWojewodztwo_Nazwa>ŁÓDZKIE</lokfiz_adSiedzWojewodztwo_Nazwa>
+    <lokfiz_adSiedzPowiat_Nazwa>m. Łódź</lokfiz_adSiedzPowiat_Nazwa>
+    <lokfiz_adSiedzGmina_Nazwa>Łódź-Śródmieście</lokfiz_adSiedzGmina_Nazwa>
+    <lokfiz_adSiedzMiejscowosc_Nazwa>Łódź</lokfiz_adSiedzMiejscowosc_Nazwa>
+    <lokfiz_adSiedzMiejscowoscPoczty_Nazwa>Łódź</lokfiz_adSiedzMiejscowoscPoczty_Nazwa>
+    <lokfiz_adSiedzUlica_Nazwa>ul.Test-Krucza</lokfiz_adSiedzUlica_Nazwa>
+    <lokfiz_FormaFinansowania_Nazwa>JEDNOSTKA LOKALNA NIE BILANSUJĄCA SAMODZIELNIE</lokfiz_FormaFinansowania_Nazwa>
+    <lokfiz_FormaFinansowania_Symbol>0</lokfiz_FormaFinansowania_Symbol>
+    <lokfiz_dataWpisuDoRejestruEwidencji />
+    <lokfiz_numerwRejestrzeEwidencji />
+    <lokfiz_OrganRejestrowy_Symbol />
+    <lokfiz_RodzajRejestru_Symbol>099</lokfiz_RodzajRejestru_Symbol>
+    <lokfiz_OrganRejestrowy_Nazwa />
+    <lokfiz_RodzajRejestru_Nazwa>PODMIOTY NIE PODLEGAJĄCE WPISOM DO REJESTRU LUB EWIDENCJI</lokfiz_RodzajRejestru_Nazwa>
+    <lokfizC_NiePodjetoDzialalnosci>false</lokfizC_NiePodjetoDzialalnosci>
+  </dane>
+</root>
+
+<!-- BIR11JednLokalnaOsFizycznejPkd -->
+
+<root>
+  <dane>
+    <lokfiz_pkd_Kod>5610A</lokfiz_pkd_Kod>
+    <lokfiz_pkd_Nazwa>RESTAURACJE I INNE STAŁE PLACÓWKI GASTRONOMICZNE</lokfiz_pkd_Nazwa>
+    <lokfiz_pkd_Przewazajace>1</lokfiz_pkd_Przewazajace>
+    <lokfiz_Silos_Symbol>CEIDG</lokfiz_Silos_Symbol>
+  </dane>
+  <dane>
+    <lokfiz_pkd_Kod>5610B</lokfiz_pkd_Kod>
+    <lokfiz_pkd_Nazwa>RUCHOME PLACÓWKI GASTRONOMICZNE</lokfiz_pkd_Nazwa>
+    <lokfiz_pkd_Przewazajace>0</lokfiz_pkd_Przewazajace>
+    <lokfiz_Silos_Symbol>CEIDG</lokfiz_Silos_Symbol>
+  </dane>
+</root>
+
+<!-- ================================================================================  -->
+<!-- ================================================================================  -->
+<!-- ================================================================================  -->
+<!-- ================================================================================  -->
+
+<!-- ==================== 3)  raporty metody DanePobierzRaportZbiorczy  ======================= -->
+
+<!--  Raporty: 
+BIR11NowePodmiotyPrawneOrazDzialalnosciOsFizycznych, 
+BIR11AktualizowanePodmiotyPrawneOrazDzialalnosciOsFizycznych , 
+BIR11SkreslonePodmiotyPrawneOrazDzialalnosciOsFizycznych
+  -->
+<root>
+  <dane>
+    <regon>022399999</regon>
+  </dane>
+  <dane>
+    <regon>147210456</regon>
+  </dane>
+  <dane>
+    <regon>243544401</regon>
+  </dane>
+  <!-- ...... -->
+  <dane>
+    <regon>341568222</regon>
+  </dane>
+</root>
+
+<!--  Raporty:  
+BIR11NoweJednostkiLokalne, 
+BIR11AktualizowaneJednostkiLokalne, 
+BIR11SkresloneJednostkiLokalne 
+-->
+
+<root>
+  <dane>
+    <regon>02081127200020</regon>
+  </dane>
+  <dane>
+    <regon>12303219200024</regon>
+  </dane>
+  <dane>
+    <regon>20027061500026</regon>
+  </dane>
+  <dane>
+    <regon>20027061500033</regon>
+  </dane>
+</root>
+
+
+
+

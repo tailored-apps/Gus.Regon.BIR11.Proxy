@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema targetNamespace="http://www.w3.org/2005/08/addressing" xmlns:mstns="http://www.w3.org/2003/05/soap-envelope" xmlns="http://www.w3.org/2005/08/addressing" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app1="http://www.w3.org/2005/08/addressing" xmlns:app2="http://CIS/BIR/PUBL/2014/07">
+  <xs:import namespace="http://CIS/BIR/PUBL/2014/07" schemaLocation="BIR11-RaportyZbiorcze-KomunikatyOBledach_app2.xsd" />
+  <xs:import namespace="http://www.w3.org/2003/05/soap-envelope" schemaLocation="BIR11-RaportyZbiorcze-KomunikatyOBledach.xsd" />
+  <xs:element name="Action" msdata:Prefix="a" nillable="true">
+    <xs:complexType>
+      <xs:simpleContent msdata:Prefix="a" msdata:ColumnName="Action_Text" msdata:Ordinal="1">
+        <xs:extension base="xs:string">
+          <xs:attribute ref="mstns:mustUnderstand" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

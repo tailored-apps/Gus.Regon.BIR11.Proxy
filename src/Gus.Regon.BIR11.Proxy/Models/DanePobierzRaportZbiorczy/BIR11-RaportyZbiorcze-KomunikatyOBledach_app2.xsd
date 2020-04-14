@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema targetNamespace="http://CIS/BIR/PUBL/2014/07" xmlns:mstns="http://www.w3.org/2003/05/soap-envelope" xmlns="http://CIS/BIR/PUBL/2014/07" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app2="http://CIS/BIR/PUBL/2014/07" xmlns:app1="http://www.w3.org/2005/08/addressing">
+  <xs:import namespace="http://www.w3.org/2005/08/addressing" schemaLocation="BIR11-RaportyZbiorcze-KomunikatyOBledach_app1.xsd" />
+  <xs:import namespace="http://www.w3.org/2003/05/soap-envelope" schemaLocation="BIR11-RaportyZbiorcze-KomunikatyOBledach.xsd" />
+  <xs:element name="DanePobierzRaportZbiorczyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DanePobierzRaportZbiorczyResult" type="xs:string" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,17 @@
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+   <s:Header>
+      <a:Action s:mustUnderstand="1">http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/DaneSzukajPodmiotyResponse</a:Action>
+   </s:Header>
+   <s:Body>
+      <DaneSzukajPodmiotyResponse xmlns="http://CIS/BIR/PUBL/2014/07">
+         <DaneSzukajPodmiotyResult><![CDATA[<root>
+  <dane>
+    <ErrorCode>4</ErrorCode>
+    <ErrorMessagePl>Nie znaleziono podmiotu dla podanych kryteriów wyszukiwania.</ErrorMessagePl>
+    <ErrorMessageEn>No data found for the specified search criteria.</ErrorMessageEn>
+    <Nip>9999999999</Nip>	
+  </dane>
+</root>]]></DaneSzukajPodmiotyResult>
+      </DaneSzukajPodmiotyResponse>
+   </s:Body>
+</s:Envelope>

@@ -1,0 +1,76 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="PublParametryWyszukiwania" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ParametryWyszukiwania">
+    <xs:complexType>
+      <xs:sequence>
+
+        <xs:element name="Regon" minOccurs="0" maxOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="14"/>
+                            <xs:minLength value="0"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+        </xs:element>
+		
+        <xs:element name="Nip" minOccurs="0" maxOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="10"/>
+                            <xs:minLength value="0"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+        </xs:element>
+		
+        <xs:element name="Krs" minOccurs="0" maxOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="10"/>
+                            <xs:minLength value="0"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+        </xs:element>
+
+        <xs:element name="Nipy" minOccurs="0" maxOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="220"/>
+                            <xs:minLength value="0"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+        </xs:element>
+
+        <xs:element name="Regony14zn" minOccurs="0" maxOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="300"/>
+                            <xs:minLength value="0"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+        </xs:element>		
+		
+        <xs:element name="Regony9zn" minOccurs="0" maxOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="200"/>
+                            <xs:minLength value="0"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+        </xs:element>
+		
+        <xs:element name="Krsy" minOccurs="0" maxOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="220"/>
+                            <xs:minLength value="0"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+
+

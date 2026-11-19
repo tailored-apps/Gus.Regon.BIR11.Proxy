@@ -12,6 +12,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v7
+      with:
+        fetch-depth: 0  # tagi v* są bazą wersji preview
     # .NET Core 3.1 nie uruchamia się na obecnym ubuntu-latest (brak zgodnego ICU/OpenSSL),
     # dlatego SDK 10 (LTS). Biblioteka dalej celuje w netstandard2.1.
     - name: Setup .NET

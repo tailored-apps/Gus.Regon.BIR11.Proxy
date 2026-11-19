@@ -5,6 +5,8 @@
 #
 #   patch   – 1.2.3 -> 1.2.4                (master: wersja commitowana i publikowana)
 #   preview – 1.2.3 -> 1.2.4-preview.<N>    (develop / PR-y; N = GITHUB_RUN_NUMBER)
+#
+# W GitHub Actions nowa wersja trafia też do outputu kroku: steps.<id>.outputs.version
 set -euo pipefail
 
 usage="użycie: $0 patch|preview <plik.csproj>"
@@ -26,4 +28,7 @@ esac
 
 sed -i "s:<Version>$current</Version>:<Version>$new</Version>:" "$project"
 grep -q "<Version>$new</Version>" "$project"
+if [[ -n "${GITHUB_OUTPUT:-}" ]]; then
+  echo "version=$new" >> "$GITHUB_OUTPUT"
+fi
 echo "Bumped $(basename "$project") from $current to $new"

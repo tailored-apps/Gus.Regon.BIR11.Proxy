@@ -1,0 +1,2 @@
+# Skrypty CI uruchamiane przez bash na Linuksie — zawsze LF.
+*.sh text eol=lf

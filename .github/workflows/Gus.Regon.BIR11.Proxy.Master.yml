@@ -11,14 +11,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v7
-    - name: Setup .NET Core
+    # .NET Core 3.1 nie uruchamia się na obecnym ubuntu-latest (brak zgodnego ICU/OpenSSL),
+    # dlatego SDK 10 (LTS). Biblioteka dalej celuje w netstandard2.1.
+    - name: Setup .NET
       uses: actions/setup-dotnet@v6
       with:
-        dotnet-version: 3.1.101
-    - name: Install dot net tools
-      run: npm install dotnettools
+        dotnet-version: 10.0.x
     - name: Bump version
-      run: node ./node_modules/dotnettools/bin/dnt.js bump-versions patch
+      run: bash .github/scripts/bump-version.sh patch ./src/Gus.Regon.BIR11.Proxy/Gus.Regon.BIR11.Proxy.csproj
     - name: Add & Commit
       uses: EndBug/add-and-commit@v11.1.1
       with:

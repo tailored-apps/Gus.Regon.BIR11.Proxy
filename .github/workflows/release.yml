@@ -4,30 +4,35 @@ on:
   push:
     branches: [ master ]
 
+# Wydania po kolei: następny run startuje (i czyta tagi) dopiero po wypchnięciu taga poprzedniego.
+concurrency:
+  group: release
+  cancel-in-progress: false
+
 jobs:
   build:
 
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write   # Add & Commit (commit z wersją) i tag v<wersja>
+      contents: write   # push taga v<wersja>
       id-token: write   # NuGet trusted publishing (token OIDC)
 
     steps:
     - uses: actions/checkout@v7
+      with:
+        fetch-depth: 0  # tagi v* są źródłem wersji
     # .NET Core 3.1 nie uruchamia się na obecnym ubuntu-latest (brak zgodnego ICU/OpenSSL),
     # dlatego SDK 10 (LTS). Biblioteka dalej celuje w netstandard2.1.
     - name: Setup .NET
       uses: actions/setup-dotnet@v6
       with:
         dotnet-version: 10.0.x
+    # Wersja = ostatni tag + 1 (albo wyższa <Version> z csproj), tylko w kopii roboczej.
+    # Bez commita na master: gałąź jest chroniona (wymagany check "build").
     - name: Bump version
       id: version
       run: bash .github/scripts/bump-version.sh patch ./src/Gus.Regon.BIR11.Proxy/Gus.Regon.BIR11.Proxy.csproj
-    - name: Add & Commit
-      uses: EndBug/add-and-commit@v11.1.1
-      with:
-        message: Version update
     - name: Install dependencies
       run: dotnet restore ./src/Gus.Regon.BIR11.sln
     - name: Build
@@ -50,7 +55,7 @@ jobs:
         --api-key "$NUGET_API_KEY"
         --source https://api.nuget.org/v3/index.json
         --skip-duplicate
-    # Jak dawniej rohith/publish-nuget: tag v<wersja> na commicie "Version update".
+    # Tag v<wersja> na wydanym commicie; to on wyznacza bazę następnej wersji.
     - name: Tag release
       env:
         VERSION: ${{ steps.version.outputs.version }}

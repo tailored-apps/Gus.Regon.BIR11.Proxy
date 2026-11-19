@@ -1,0 +1,59 @@
+name: Gus.Regon.BIR11.Proxy Release
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write   # Add & Commit (commit z wersją) i tag v<wersja>
+      id-token: write   # NuGet trusted publishing (token OIDC)
+
+    steps:
+    - uses: actions/checkout@v7
+    # .NET Core 3.1 nie uruchamia się na obecnym ubuntu-latest (brak zgodnego ICU/OpenSSL),
+    # dlatego SDK 10 (LTS). Biblioteka dalej celuje w netstandard2.1.
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v6
+      with:
+        dotnet-version: 10.0.x
+    - name: Bump version
+      id: version
+      run: bash .github/scripts/bump-version.sh patch ./src/Gus.Regon.BIR11.Proxy/Gus.Regon.BIR11.Proxy.csproj
+    - name: Add & Commit
+      uses: EndBug/add-and-commit@v11.1.1
+      with:
+        message: Version update
+    - name: Install dependencies
+      run: dotnet restore ./src/Gus.Regon.BIR11.sln
+    - name: Build
+      run: dotnet build ./src/Gus.Regon.BIR11.sln --configuration Release --no-restore
+    - name: Test
+      run: dotnet test ./src/Gus.Regon.BIR11.sln --no-restore --verbosity normal
+    # Trusted publishing: zamiast stałego klucza API krótkotrwały klucz (1 h) z tokenu OIDC.
+    # Na nuget.org musi istnieć polityka dla tailored-apps/Gus.Regon.BIR11.Proxy, plik release.yml.
+    - name: NuGet login (OIDC -> temp API key)
+      uses: NuGet/login@v1
+      id: login
+      with:
+        user: ${{ secrets.NUGET_USER }} # nazwa profilu na nuget.org, nie e-mail
+    - name: Publish NuGet
+      env:
+        NUGET_API_KEY: ${{ steps.login.outputs.NUGET_API_KEY }}
+        VERSION: ${{ steps.version.outputs.version }}
+      run: >-
+        dotnet nuget push "./src/Gus.Regon.BIR11.Proxy/bin/Release/Gus.Regon.BIR11.Proxy.$VERSION.nupkg"
+        --api-key "$NUGET_API_KEY"
+        --source https://api.nuget.org/v3/index.json
+        --skip-duplicate
+    # Jak dawniej rohith/publish-nuget: tag v<wersja> na commicie "Version update".
+    - name: Tag release
+      env:
+        VERSION: ${{ steps.version.outputs.version }}
+      run: |
+        git tag "v$VERSION"
+        git push origin "v$VERSION"

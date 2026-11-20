@@ -11,6 +11,8 @@
     <Description>Proxy Lib for consuming GUS Regon API web service written in .net standard supported for both .net Core and Framework.</Description>
     <SignAssembly>false</SignAssembly>
     <DelaySign>false</DelaySign>
+    <!-- Audyt podatności także dla zależności przechodnich (dla netstandard domyślnie tylko bezpośrednie). -->
+    <NuGetAuditMode>all</NuGetAuditMode>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Models\DanePobierzRaportZbiorczy\generate.bat" />
@@ -23,6 +25,15 @@
     <PackageReference Include="System.ServiceModel.NetTcp" Version="4.10.*" />
     <PackageReference Include="System.ServiceModel.Security" Version="4.10.*" />
     <PackageReference Include="WcfCoreMtomEncoder" Version="0.1.16" />
+  </ItemGroup>
+  <ItemGroup Label="Podniesione zależności przechodnie (podatności)">
+    <!-- System.ServiceModel.* 4.10.3 ciągnie Xml 6.0.1 -> Pkcs 6.0.1 -> Formats.Asn1 6.0.0 (GHSA-555c-2p6r-68mm,
+         GHSA-447r-wph3-92pm). Xml 6.0.2 wymaga Pkcs >= 6.0.5 i Asn1 >= 6.0.1. -->
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="6.0.2" />
+    <!-- WcfCoreMtomEncoder -> Microsoft.AspNet.WebApi.Client 5.2.7 ciągnie Newtonsoft.Json 10.0.1 (GHSA-5crp-9r3c-p9vr)
+         i przez Bson 1.0.1 NETStandard.Library 1.6.1 -> System.Net.Http / System.Text.RegularExpressions 4.3.0.
+         Bson 1.0.3 dla netstandard2.0 zależy tylko od Newtonsoft.Json >= 13.0.1. -->
+    <PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.3" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services" />
